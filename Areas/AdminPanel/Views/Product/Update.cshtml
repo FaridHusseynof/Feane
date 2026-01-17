@@ -1,0 +1,43 @@
+﻿@model UpdateVM
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Update form</h4>
+
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <input type="hidden" asp-for="id_">
+
+                    <div class="form-group">
+                        <label asp-for="title">Enter Title</label>
+                        <input type="text" class="form-control" asp-for="title" placeholder="Title">
+                        <span class="text-danger" asp-validation-for="title" style="color:red;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="description">Enter Description</label>
+                        <input type="text" asp-for="description" class="form-control" placeholder="Description">
+                        <span class="text-danger" asp-validation-for="description" style="color:red;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="price">Enter Price</label>
+                        <input asp-for="price" class="form-control" placeholder="Price">
+                        <span class="text-danger" asp-validation-for="price" style="color:red;"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="imageFile">Enter Image</label>
+                        <input type="file" asp-for="imageFile" class="form-control" placeholder="ImageURL">
+                        <span class="text-danger" asp-validation-for="imageFile" style="color:red;"></span>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary me-2">Submit</button>
+                    <a class="btn btn-light" asp-action="Index" asp-controller="Product">Cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
